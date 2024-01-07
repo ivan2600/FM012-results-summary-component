@@ -28,11 +28,14 @@
 body {
   font-family: 'Hanken Grotesk', sans-serif;
   font-size: 1.6rem;
+  display: grid;
+  min-height: 100vh;
+  align-items: center;
 }
 
 .main-container {
   width: 375px;
-  border: 1px solid black;
+  margin: 0 auto;
 }
 
 .your-result {
@@ -199,4 +202,33 @@ body {
   font-size: 1.6rem;
   font-weight: 600;
   border-radius: 30px;
+  margin-bottom: 2rem;
+  cursor: pointer;
+}
+
+.summary button:hover {
+  background-image: linear-gradient(
+    to bottom, 
+    #7857ff, 
+    #694cf9, 
+    #5941f4, 
+    #4736ee, 
+    #2e2be9
+    );
+}
+
+@media screen and (min-width: 880px) {
+  .main-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 750px;
+    border-radius: 30px;
+    -webkit-box-shadow: 10px 9px 85px -23px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 9px 85px -23px rgba(0,0,0,0.75);
+    box-shadow: 10px 9px 85px -23px rgba(0,0,0,0.75);
+  }
+  .your-result {
+    border-radius: 30px
+  }
+
 }
