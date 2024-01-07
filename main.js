@@ -6,8 +6,7 @@ fetch('data.json')
     return response.json();
   })
   .then(data => {
-    console.log(data);
-    document.getElementById('category').innerText = data[0].icon;
+    
 
     const iconsContainer = document.getElementById('icons-container');
 
